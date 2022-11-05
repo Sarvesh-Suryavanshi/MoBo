@@ -13,8 +13,9 @@
 		798E7F4C29163EEC00621CD6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 798E7F4A29163EEC00621CD6 /* Main.storyboard */; };
 		798E7F4E29163EFA00621CD6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 798E7F4D29163EFA00621CD6 /* Assets.xcassets */; };
 		798E7F5129163EFA00621CD6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 798E7F4F29163EFA00621CD6 /* LaunchScreen.storyboard */; };
-		798E7F5C29163EFB00621CD6 /* MoBoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798E7F5B29163EFB00621CD6 /* MoBoTests.swift */; };
+		798E7F5C29163EFB00621CD6 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798E7F5B29163EFB00621CD6 /* HomeView.swift */; };
 		798E7F6729163EFB00621CD6 /* MoBoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798E7F6629163EFB00621CD6 /* MoBoUITests.swift */; };
+		79BE435929165663003ADD38 /* Movies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79BE435829165663003ADD38 /* Movies.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,11 +45,12 @@
 		798E7F5029163EFA00621CD6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		798E7F5229163EFA00621CD6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		798E7F5729163EFB00621CD6 /* MoBoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MoBoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		798E7F5B29163EFB00621CD6 /* MoBoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoBoTests.swift; sourceTree = "<group>"; };
+		798E7F5B29163EFB00621CD6 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		798E7F5D29163EFB00621CD6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		798E7F6229163EFB00621CD6 /* MoBoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MoBoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		798E7F6629163EFB00621CD6 /* MoBoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoBoUITests.swift; sourceTree = "<group>"; };
 		798E7F6829163EFB00621CD6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		79BE435829165663003ADD38 /* Movies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movies.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,10 @@
 		798E7F4329163EEC00621CD6 /* MoBo */ = {
 			isa = PBXGroup;
 			children = (
+				798E7F842916413A00621CD6 /* Resources */,
+				798E7F832916412D00621CD6 /* Utilities */,
+				798E7F822916412000621CD6 /* Services */,
+				798E7F772916401900621CD6 /* Scenes */,
 				798E7F4429163EEC00621CD6 /* AppDelegate.swift */,
 				798E7F4629163EEC00621CD6 /* SceneDelegate.swift */,
 				798E7F4829163EEC00621CD6 /* ViewController.swift */,
@@ -113,7 +119,7 @@
 		798E7F5A29163EFB00621CD6 /* MoBoTests */ = {
 			isa = PBXGroup;
 			children = (
-				798E7F5B29163EFB00621CD6 /* MoBoTests.swift */,
+				798E7F5B29163EFB00621CD6 /* HomeView.swift */,
 				798E7F5D29163EFB00621CD6 /* Info.plist */,
 			);
 			path = MoBoTests;
@@ -126,6 +132,99 @@
 				798E7F6829163EFB00621CD6 /* Info.plist */,
 			);
 			path = MoBoUITests;
+			sourceTree = "<group>";
+		};
+		798E7F772916401900621CD6 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				798E7F812916410D00621CD6 /* MovieDetailsScene */,
+				798E7F802916410100621CD6 /* SearchScene */,
+				798E7F782916402B00621CD6 /* HomeScene */,
+			);
+			name = Scenes;
+			sourceTree = "<group>";
+		};
+		798E7F782916402B00621CD6 /* HomeScene */ = {
+			isa = PBXGroup;
+			children = (
+				79BE4357291654EE003ADD38 /* Entity */,
+				798E7F7F2916408F00621CD6 /* Protocol */,
+				798E7F7E2916408300621CD6 /* Controller */,
+				798E7F7D2916406600621CD6 /* Model */,
+				798E7F7C2916405200621CD6 /* View */,
+			);
+			name = HomeScene;
+			sourceTree = "<group>";
+		};
+		798E7F7C2916405200621CD6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		798E7F7D2916406600621CD6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		798E7F7E2916408300621CD6 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		798E7F7F2916408F00621CD6 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Protocol;
+			sourceTree = "<group>";
+		};
+		798E7F802916410100621CD6 /* SearchScene */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = SearchScene;
+			sourceTree = "<group>";
+		};
+		798E7F812916410D00621CD6 /* MovieDetailsScene */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = MovieDetailsScene;
+			sourceTree = "<group>";
+		};
+		798E7F822916412000621CD6 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Services;
+			sourceTree = "<group>";
+		};
+		798E7F832916412D00621CD6 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Utilities;
+			sourceTree = "<group>";
+		};
+		798E7F842916413A00621CD6 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		79BE4357291654EE003ADD38 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				79BE435829165663003ADD38 /* Movies.swift */,
+			);
+			name = Entity;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -260,6 +359,7 @@
 			files = (
 				798E7F4929163EEC00621CD6 /* ViewController.swift in Sources */,
 				798E7F4529163EEC00621CD6 /* AppDelegate.swift in Sources */,
+				79BE435929165663003ADD38 /* Movies.swift in Sources */,
 				798E7F4729163EEC00621CD6 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -268,7 +368,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				798E7F5C29163EFB00621CD6 /* MoBoTests.swift in Sources */,
+				798E7F5C29163EFB00621CD6 /* HomeView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
